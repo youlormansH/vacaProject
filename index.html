@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E"/>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Miao&display=swap" rel="stylesheet">
+  <title>BiteBud</title>
+</head>
+<body class="min-h-screen">
+
+  <div class="flex flex-col min-h-full"></div>
+  <header>
+    <div class="navBar">
+      <div class="appName">
+        <button id="logoMain" onclick="location.reload()">BiteBud</button>
+      </div>
+      <div>
+        <ul class="flex items-center space-x-6">
+          <li class="dropdown">
+            <button class="dropbtn" onclick="toggleDropdown(event)">Recent Searches</button>
+            <div id="testing" class="dropdown-content">
+            </div>
+          </li>
+        </ul>
+      </div>
+  </header>
+  <main class="flex-grow">
+    <!-- main page with search bar for city -->
+    <section id="mainPage">
+      <!-- section for restaurant info and youtube to be displayed -->
+      <section id="mainPageInfo">
+        <h2>Input a city name and select a state to receive information on nearby attractions and bites!</h2>
+      </section>
+      <section id="main-page">
+        <div class="relative h-screen">
+          <div id="mainImage" class="absolute inset-0 bg-cover bg-center"
+            style="background-image: url('./assets/images/enjoying-lunch-with-friends.png'); width: 50%; height: 50%; top: 25%; left: 25%;">
+          </div>
+          <div class="absolute inset-0 flex justify-center items-center">
+            <div class="w-1/2">
+              <form onsubmit="return false;" id="formMain" class="flex justify-center items-center">
+                <input id="inputCity"
+                  class="w-1/2 border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                  type="text" placeholder="Search">
+                <select id="inputState" name="state" size="1">
+                  <option value="AK">AK</option>
+                  <option value="AL">AL</option>
+                  <option value="AR">AR</option>
+                  <option value="AZ">AZ</option>
+                  <option value="CA">CA</option>
+                  <option value="CO">CO</option>
+                  <option value="CT">CT</option>
+                  <option value="DC">DC</option>
+                  <option value="DE">DE</option>
+                  <option value="FL">FL</option>
+                  <option value="GA">GA</option>
+                  <option value="HI">HI</option>
+                  <option value="IA">IA</option>
+                  <option value="ID">ID</option>
+                  <option value="IL">IL</option>
+                  <option value="IN">IN</option>
+                  <option value="KS">KS</option>
+                  <option value="KY">KY</option>
+                  <option value="LA">LA</option>
+                  <option value="MA">MA</option>
+                  <option value="MD">MD</option>
+                  <option value="ME">ME</option>
+                  <option value="MI">MI</option>
+                  <option value="MN">MN</option>
+                  <option value="MO">MO</option>
+                  <option value="MS">MS</option>
+                  <option value="MT">MT</option>
+                  <option value="NC">NC</option>
+                  <option value="ND">ND</option>
+                  <option value="NE">NE</option>
+                  <option value="NH">NH</option>
+                  <option value="NJ">NJ</option>
+                  <option value="NM">NM</option>
+                  <option value="NV">NV</option>
+                  <option value="NY">NY</option>
+                  <option value="OH">OH</option>
+                  <option value="OK">OK</option>
+                  <option value="OR">OR</option>
+                  <option value="PA">PA</option>
+                  <option value="RI">RI</option>
+                  <option value="SC">SC</option>
+                  <option value="SD">SD</option>
+                  <option value="TN">TN</option>
+                  <option value="TX">TX</option>
+                  <option value="UT">UT</option>
+                  <option value="VA">VA</option>
+                  <option value="VT">VT</option>
+                  <option value="WA">WA</option>
+                  <option value="WI">WI</option>
+                  <option value="WV">WV</option>
+                  <option value="WY">WY</option>
+                </select>
+                <button id="searchBtnMain"
+                  class="bg-blue-500 hover:bg-blue-700 text-green font-bold py-2 px-4 rounded-r-lg"> Search
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- section for restaurant info and youtube to be displayed -->
+      <section id="search-page" class="hidden">
+        <div id="loadingIcon">
+          <img src="./assets/images/BiteBudLogoLoading.jpg.gif" alt="loading icon">
+        </div>
+
+      </section>
+  </main>
+  <footer class="footerBar">
+    <div>
+      <p>Copyright © 2023 - All right reserved by Hi-5 Company</p>
+    </div>
+  </footer>
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
